@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cork Leather Goods</title>
+    <style>
+      body {
+        background-color: #ccf2f4;
+        text-align: center;
+      }
+      div {
+        display: block;
+        margin: 0 auto;
+        border: 1em solid #a4ebf3;
+        border-radius: 10px;
+        padding: 5px 20px;
+        background: #edf7f7;
+        max-width: 70%;
+      }
+      img {
+        max-width: 90%;
+        border: solid #aaaaaa;
+        border-radius: 10px;
+      }
+      a {
+        color: #393e46;
+      }
+      h1 {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 38px;
+      }
+      p {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 13px;
+        line-height: 150%;
+      }
+      .imgCredit {
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .portfolio {
+        font-weight: bold;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background: #5dcdda;
+        color: white;
+        font-size: 16px;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        padding: 15px 20px;
+        border: solid #5dcdda;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        border: solid #5dcdda;
+        color: #5dcdda;
+        background: #edf7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>What is Cork Leather?</h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/938/original/cork-oak-trees-Alentejo-Portugal-area.jpg?1619441337"
+        alt="Cork Oak Tree"
+      />
+      <p class="imgCredit">
+        Image credit:
+        <a
+          href="https://www.climatechangepost.com/news/2016/2/3/managing-cork-oak-production-under-climate-change-/"
+          target="_blank"
+          >ClimateChangePost</a
+        >
+      </p>
+      <p>
+        Cork leather comes from the bark of the Cork Oak tree, and is considered
+        one of the most sustainable forestry practices on the planet. Harvesting
+        cork does not harm the Cork Oak in any way, but instead, helps it to
+        enter a regeneration process, which extends its lifespan in the
+        long-term. Cork leather is not only the most natural and durable "vegan
+        leather" currently on the market, but it has all of the benefits of
+        animal leather, and none of the cruelty and pollution.
+      </p>
+      <hr />
+      <p>
+        Cheryl is crafter from the sunny island Singapore 🌞, and she
+        specialises in handcrafting small goods using cork leather. Every piece
+        of work is carefully handcrafted and handstitched by Cheryl. There is
+        simply no two of the same!
+      </p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/941/original/works.png?1619448304"
+        width="250px"
+      />
+      <p class="portfolio">
+        <a href="https://www.instagram.com/cherylchongg/" target="_blank"
+          >Click here to view her portfolio
+        </a>
+      </p>
+      <br />
+      <button>Buy one today!</button>
+      <p>
+        Coded by
+        <a href="https://www.instagram.com/cherylchongg/" target="_blank"
+          >Cheryl</a
+        >💟
+      </p>
+    </div>
+    <script>
+      function buyNow() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let country = prompt("Which country are you from?")
+          .toLowerCase()
+          .trim();
+
+        if (country === "singapore") {
+          alert(
+            `Thank you ${name}!\nWe will get in touch with you via your email ${email}. 😘`
+          );
+        } else {
+          alert(
+            `Oh no ${name}, you are not from Singapore.🙁\nBut no worries, we will email you to follow up!`
+          );
+        }
+      }
+
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", buyNow);
+    </script>
+  </body>
+</html>
